@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 int main() {
-    int n,i,arr_len;
+    int n,arr_len;
     char str[100];
     cout<<"tell me how many row do you want"<<endl;
     cin>>n;
