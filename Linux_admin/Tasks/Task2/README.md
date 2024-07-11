@@ -2,6 +2,7 @@
 
 **Q**:Move the binary file output to the directory /usr/local/bin with sudo permissions. Afterward, attempt to execute the binary from any working directory and explain the outcome. Provide a detailed explanation supported by evidence as to why the 
 binary can be executed from any location.
+
 **Answer:**
 `~$ cd ./Task2_Q1/`
 `~$ sudo mv a.out /usr/local/bin`
