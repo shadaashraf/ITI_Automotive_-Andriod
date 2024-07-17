@@ -12,9 +12,8 @@
 
 **Answer:**
 
-`username="shada
-sudo usermod --expiredate 1 $username
-`
+`username="shada"`
+`sudo usermod --expiredate 6 "$username"`
 
 
 ----------
