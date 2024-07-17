@@ -12,7 +12,7 @@
 
 **Answer:**
 
-`username="yourUser"`
+`username="shada"`
 `if ! id "$username" &>/dev/null; then `
 ` useradd -m -s /bin/bash -G pgroup "$username" `
 `fi `
