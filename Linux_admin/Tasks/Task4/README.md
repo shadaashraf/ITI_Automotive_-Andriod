@@ -33,7 +33,7 @@
 ### Q4. Delete group account
 **Answer:**
 
-`sudo groupdel pgroup` 
+`sudo groupdel Ahraf` 
 
 ----------
 
