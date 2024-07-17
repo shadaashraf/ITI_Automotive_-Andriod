@@ -12,11 +12,9 @@
 
 **Answer:**
 
-`username="shada"`
-`if ! id "$username" &>/dev/null; then `
-` useradd -m -s /bin/bash -G pgroup "$username" `
-`fi `
-` usermod -L "$username"`
+`username="shada
+sudo usermod --expiredate 1 $username
+`
 
 
 ----------
