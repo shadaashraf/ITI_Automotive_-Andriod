@@ -12,11 +12,8 @@
 
 **Answer:**
 
-`username="yourUser"`
-`if ! id "$username" &>/dev/null; then `
-` useradd -m -s /bin/bash -G pgroup "$username" `
-`fi `
-` usermod -L "$username"`
+`username="shada"`
+`sudo usermod --expiredate 6 "$username"`
 
 
 ----------
@@ -33,7 +30,7 @@
 ### Q4. Delete group account
 **Answer:**
 
-`sudo groupdel pgroup` 
+`sudo groupdel Ahraf` 
 
 ----------
 
