@@ -1,4 +1,4 @@
-### Session One: Disk Image Setup and Filesystem Creation
+## Session One: Disk Image Setup and Filesystem Creation
 #### Objective: 
 To understand and practice the steps involved in creating a disk image, partitioning it, setting up loop devices, and formatting partitions with different filesystems.
         
