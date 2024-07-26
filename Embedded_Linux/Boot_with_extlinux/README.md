@@ -43,11 +43,21 @@ Assuming you have an SD image, mount it to the appropriate directories:
 Place the necessary files in the boot partition:
 
 `/mnt/Boot
-├── extlinux
-│   └── extlinux.conf
-├── uboot.env
-├── vexpress-v2p-ca9.dtb
-└── zImage` 
+`
+
+`├── extlinux
+`
+
+`│   └── extlinux.conf
+`
+
+`├── uboot.env
+`
+
+`├── vexpress-v2p-ca9.dtb
+`
+
+`└── zImage` 
 
 Your `extlinux.conf` file should look like this:
 
