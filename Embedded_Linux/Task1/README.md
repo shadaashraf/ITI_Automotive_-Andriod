@@ -17,10 +17,9 @@ int add(int x, int y);`
 Adds two integers and returns the result.
 
 **main.c**
-`
-#include <stdio.h>`
-`#include "calculate.h"`
 
+`#include <stdio.h>`
+`#include "calculate.h"`
 `int main() {`
    ` int a = 5, b = 10;`
    ` int result = add(a, b);`
