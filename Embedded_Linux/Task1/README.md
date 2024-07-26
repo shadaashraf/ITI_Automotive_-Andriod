@@ -30,9 +30,7 @@ Adds two integers and returns the result.
    
   `  printf("The result of adding %d and %d is %d\n", a, b, result);`
   
-   ` return 0;
-   
-}`
+   ` return 0;}`
 
 ## Compiling and Running
 
