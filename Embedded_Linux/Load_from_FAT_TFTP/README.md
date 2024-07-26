@@ -61,4 +61,6 @@ This project involves configuring a system to load boot files either from an MMC
   5-reset` 
   ### Output:
 **From mmc to RAM**
+![Screenshot from 2024-07-26 17-00-30](https://github.com/user-attachments/assets/23ff82e4-4076-4b57-9a46-9fa8dc98618e)
+
 **From TFTP server to RAM**
