@@ -89,4 +89,5 @@ Copy code
 
 `hello, it's shada`
 ### 6. Output
-/home/shada/Pictures/Screenshot from 2024-07-26 14-43-26.png
+
+![Screenshot from 2024-07-26 14-43-26](https://github.com/user-attachments/assets/448303a2-a391-4232-ab19-c27434273f76)
