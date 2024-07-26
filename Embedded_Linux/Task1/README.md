@@ -23,11 +23,17 @@ Adds two integers and returns the result.
 `#include "calculate.h"`
 
 `int main() {`
+
    ` int a = 5, b = 10;`
+   
    ` int result = add(a, b);`
+   
   `  printf("The result of adding %d and %d is %d\n", a, b, result);`
+  
    ` return 0;
+   
 }`
+
 ## Compiling and Running
 
 ### Using a Static Library
