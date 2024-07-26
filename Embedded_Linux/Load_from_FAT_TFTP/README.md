@@ -1,4 +1,4 @@
-# Load files to From Fat to RAM and using TFTP 
+# Load files From FAT to RAM and using TFTP server to load to RAM
 
 ## Overview
 
