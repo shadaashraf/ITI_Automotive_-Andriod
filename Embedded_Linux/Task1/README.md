@@ -15,16 +15,17 @@ This project demonstrates how to compile and use a simple C library for addition
 int add(int x, int y);`
 
 Adds two integers and returns the result.
+
 **main.c**
 `
-#include <stdio.h>
-#include "calculate.h"
+#include <stdio.h>`
+`#include "calculate.h"`
 
-int main() {
-    int a = 5, b = 10;
-    int result = add(a, b);
-    printf("The result of adding %d and %d is %d\n", a, b, result);
-    return 0;
+`int main() {`
+   ` int a = 5, b = 10;`
+   ` int result = add(a, b);`
+  `  printf("The result of adding %d and %d is %d\n", a, b, result);`
+   ` return 0;
 }`
 ## Compiling and Running
 
