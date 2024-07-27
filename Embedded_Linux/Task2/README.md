@@ -1,5 +1,5 @@
 
-### Session One: Disk Image Setup and Filesystem Creation
+### Create SD Image
 
 #### Objective:
 
@@ -7,7 +7,7 @@ To understand and practice the steps involved in creating a disk image, partitio
 
 #### Steps and Explanation:
 
-1.  **Creating a Disk Image using `dd`**:
+1.  **Creating a SD Image using `dd`**:
     
     -   Command: `shada@shada:~$ dd if=/dev/zero of=sd.img bs=1M count=1024`
     -   **Explanation**:
@@ -16,7 +16,7 @@ To understand and practice the steps involved in creating a disk image, partitio
         -   `of=sd.img`: Output file is `sd.img`, the name of the disk image being created.
         -   `bs=1M`: Sets the block size to 1 megabyte.
         -   `count=1024`: Specifies the number of blocks to copy. In this case, it copies 1024 blocks, creating a 1 GB disk image.
-2.  **Partitioning the Disk Image using `cfdisk`**:
+2.  **Partitioning the SD Image using `cfdisk`**:
     
     -   Command: `shada@shada:~$ cfdisk sd.img`
     -   **Explanation**: The `cfdisk` command is used to create partitions on the disk image `sd.img`. `cfdisk` is a curses-based partitioning tool that provides a user-friendly interface to partition disks.
@@ -51,7 +51,3 @@ To understand and practice the steps involved in creating a disk image, partitio
     
     -   Command: `shada@shada:~$ cfdisk sd.img`
     -   **Explanation**: Running `cfdisk` again on `sd.img` can be used to verify the partitions and ensure that the formatting was successful.
-
-#### Summary:
-
-In this session, we successfully created a disk image, partitioned it using `cfdisk` into two partitions (200 MB FAT16 bootable and 500 MB ext4), set up loop devices, and formatted the partitions with different filesystems (though the FAT16 formatting encountered an issue). These steps are fundamental in managing disk images and preparing them for use in various applications, such as virtual machines or embedded systems.
