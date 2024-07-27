@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+typedef int* (*callback)(int** , int , int (*)(int,int));
+int sum(int x,int y){
+
+    return x+y;
+}
+
+int* SumArr(int** TwoD_arr, int Arr_size, int (*func)(int,int)){
+    int i,sum;
+    int *result=(int*)malloc(sizeof(int)*Arr_size);
+    for(i=0;i<Arr_size;i++)
+    {
+        sum=(*func)(TwoD_arr[i][0],TwoD_arr[i][1]);
+        result[i]=sum;
+    }
+    return result;
+}
+
+int main() {
+    int arr_size=3;
+    int **arr=(int**)malloc(sizeof(int*)*3);
+    for(int i=0;i<arr_size;i++)
+    {
+        arr[i]=(int*)malloc(sizeof(int)*2);
+    }
+    arr[0][0] = 1; arr[0][1] = 2;
+    arr[1][0] = 3; arr[1][1] = 4;
+    arr[2][0] = 5; arr[2][1] = 6;
+
+    int *result=SumArr(arr,arr_size,sum);
+     for (int i = 0; i < arr_size; i++) {
+        printf("Sum = %d\n", i, result[i]);
+    }
+    free(result);
+    for (int i = 0; i < arr_size; i++) {
+        free(arr[i]);
+    }
+    free(arr);
+    
+}
