@@ -132,7 +132,9 @@ make menuconfig`
 -   Find the `SIMPLEAPP Packages` menu.
 -   Select and enable the `simpleapp` package.
 ![Screenshot from 2024-08-07 01-37-01](https://github.com/user-attachments/assets/04b754fa-423a-4443-a8a4-c194eb6aa51a)
+![Screenshot from 2024-08-07 01-38-35](https://github.com/user-attachments/assets/944d4211-1649-4aaa-b63f-9b4252432d5b)
 
+![Screenshot from 2024-08-07 01-38-50](https://github.com/user-attachments/assets/9b75ea3f-8426-4218-9f60-0054c43ef1f2)
 
 
 ## Building the Root Filesystem with Buildroot
