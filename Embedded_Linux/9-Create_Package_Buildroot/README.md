@@ -31,7 +31,8 @@ After creating the source file, you should have the following structure:
 
 `ls ./package/simpleapp/src` 
 
-_**(Insert Image of `ls` output in `src` directory here)**_
+![Screenshot from 2024-08-07 01-40-29](https://github.com/user-attachments/assets/3dd388a4-95bd-49ee-9e3f-b3a0395c8dad)
+
 
 ## Creating the Makefile for the Application
 
@@ -61,7 +62,8 @@ After creating the Makefile, you should have the following structure:
 
 `ls ./package/simpleapp` 
 
-_**(Insert Image of `ls` output in `simpleapp` directory here)**_
+![Screenshot from 2024-08-07 01-40-12](https://github.com/user-attachments/assets/569cd029-c1b3-416d-858e-e6ed7b8523cc)
+
 
 ## Creating the Buildroot Package Makefile
 
@@ -129,8 +131,9 @@ make menuconfig`
 -   Navigate to `Target packages`.
 -   Find the `SIMPLEAPP Packages` menu.
 -   Select and enable the `simpleapp` package.
+![Screenshot from 2024-08-07 01-37-01](https://github.com/user-attachments/assets/04b754fa-423a-4443-a8a4-c194eb6aa51a)
 
-_**(Insert Image of `menuconfig` showing `simpleapp` package enabled here)**_
+
 
 ## Building the Root Filesystem with Buildroot
 
