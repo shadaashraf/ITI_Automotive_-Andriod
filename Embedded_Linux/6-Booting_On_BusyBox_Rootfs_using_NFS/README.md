@@ -99,6 +99,8 @@ Start QEMU with the following command:
 #### Set Client IP Address
 
 `setenv ipaddr 192.168.1.50` 
+
+
 **Check if this ip isn't used by Ping it**
 
 ![Screenshot from 2024-07-28 13-15-44](https://github.com/user-attachments/assets/e1e28ae6-4cf0-4ab3-9f12-9f5ffba10440)
