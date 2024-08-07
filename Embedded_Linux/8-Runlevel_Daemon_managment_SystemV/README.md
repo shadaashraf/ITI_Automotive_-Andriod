@@ -18,12 +18,10 @@ This project demonstrates the management of daemons in different run levels usin
 
 Create the necessary directories for managing the run levels:
 
-bash
-
-Copy code
-
 `cd /etc
 mkdir rc2.d rc3.d` 
+![Screenshot from 2024-08-06 13-34-43](https://github.com/user-attachments/assets/396d197e-3b34-4b85-986e-46d8b50b9dab)
+
 
 ### 2. Create Daemon Scripts
 
@@ -38,6 +36,7 @@ while true; do
     sleep 10
 done` 
 
+
 **/bin/helloApp**
 
 
@@ -48,11 +47,14 @@ while true; do
     sleep 10
 done` 
 
+![Screenshot from 2024-08-06 13-34-15](https://github.com/user-attachments/assets/d0580ca9-a1fa-45e6-b06b-9dd17369ae72)
 Make sure both scripts are executable:
 
 
 `chmod +x /bin/hiApp
 chmod +x /bin/helloApp` 
+
+
 
 ### 3. Create Initialization Scripts
 
@@ -112,11 +114,13 @@ For run level 2:
 
 `cd /etc/rc2.d
 ln -s /etc/init.d/rcs2 S20helloApp` 
+![Screenshot from 2024-08-06 13-35-33](https://github.com/user-attachments/assets/015b2f0f-aaa4-4727-9dca-55a6f6171231)
 
 For run level 3:
 
 `cd /etc/rc3.d
 ln -s /etc/init.d/rcs3 S20hiApp` 
+![Screenshot from 2024-08-06 13-35-59](https://github.com/user-attachments/assets/e99dbc3b-06f2-4f0d-aba6-9782c5c32cd1)
 
 ### 5. Create the Main RC Script
 
@@ -156,6 +160,8 @@ ln -s /etc/init.d/rcs3 S20hiApp`
 	esac
 
 	exit 0` 
+**Now i have rcs2 ,rcs3 ,rc in init.d**
+![Screenshot from 2024-08-06 13-35-07](https://github.com/user-attachments/assets/c5ba3ac5-940d-45be-be12-f4b00f258f11)
 
 Make sure the `rc` script is executable:
 
@@ -168,7 +174,8 @@ Modify the `inittab` file to use the custom `rc` script for managing run levels 
 `2:2:wait:/etc/init.d/rc 2` 
 
 ` 3:3:wait:/etc/init.d/rc 3` 
-
+![Screenshot from 2024-08-05 15-30-00](https://github.com/user-attachments/assets/08ad06f1-ddd4-41e0-944f-67fe7bd30214)
+**Note** remove the runlevels you created from rcS (rcS:145:wait:/etc/init.d/rcS)
 ## Usage
 
 To manage the daemons, use the `rc` script with the desired run level:
@@ -181,6 +188,7 @@ To manage the daemons, use the `rc` script with the desired run level:
 
     `/etc/init.d/rc 3` 
     
+![Uploading Screenshot from 2024-08-06 14-28-43.png…]()
 
 ## Notes
 
