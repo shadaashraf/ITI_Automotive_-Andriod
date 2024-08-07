@@ -173,11 +173,13 @@ This guide outlines the steps to create a BusyBox-based root filesystem  in QEMU
    reset
    ```
 
+![Screenshot from 2024-07-28 10-36-29](https://github.com/user-attachments/assets/ac5831f3-732e-4e10-af83-b7130ce2ff1f)
+
    
 ![Screenshot from 2024-07-28 12-05-18](https://github.com/user-attachments/assets/dd1bdd78-9535-47fc-b92d-8033421a5d6f)
 
 
-![Screenshot from 2024-07-28 10-36-29](https://github.com/user-attachments/assets/ac5831f3-732e-4e10-af83-b7130ce2ff1f)
+
 ---
 
 
