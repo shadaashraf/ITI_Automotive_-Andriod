@@ -17,9 +17,10 @@ This project demonstrates the management of daemons in different run levels usin
 ### 1. Create Run-Level Directories
 
 Create the necessary directories for managing the run levels:
+	
+	`cd /etc
+	mkdir rc2.d rc3.d` 
 
-`cd /etc
-mkdir rc2.d rc3.d` 
 ![Screenshot from 2024-08-06 13-34-43](https://github.com/user-attachments/assets/396d197e-3b34-4b85-986e-46d8b50b9dab)
 
 
@@ -65,7 +66,7 @@ Create the initialization scripts in `/etc/init.d`:
 
 **/etc/init.d/rcs2**
 	
-	`case "$1" in
+	case "$1" in
 	  start)
 	    printf "Starting Your Daemon: "
 	    start-stop-daemon -S -n helloApp -a /bin/helloApp &
@@ -81,7 +82,7 @@ Create the initialization scripts in `/etc/init.d`:
 	    exit 1
 	    ;;
 	esac
-	exit $?` 
+	exit $?
 
 **/etc/init.d/rcs3**
 
@@ -115,21 +116,27 @@ Create symbolic links to the initialization scripts in the respective run-level 
 
 For run level 2: 
 
-`cd /etc/rc2.d
-ln -s /etc/init.d/rcs2 S20helloApp` 
+	cd /etc/rc2.d
+	ln -s /etc/init.d/rcs2 S20helloApp
+
+ 
 ![Screenshot from 2024-08-06 13-35-33](https://github.com/user-attachments/assets/015b2f0f-aaa4-4727-9dca-55a6f6171231)
+
 
 For run level 3:
 
-`cd /etc/rc3.d
-ln -s /etc/init.d/rcs3 S20hiApp` 
+	cd /etc/rc3.d
+	ln -s /etc/init.d/rcs3 S20hiApp
+
+ 
 ![Screenshot from 2024-08-06 13-35-59](https://github.com/user-attachments/assets/e99dbc3b-06f2-4f0d-aba6-9782c5c32cd1)
+
 
 ### 5. Create the Main RC Script
 
 **/etc/init.d/rc**
 
-	`#!/bin/sh
+	#!/bin/sh
 
 	directory="$1"
 
@@ -162,9 +169,12 @@ ln -s /etc/init.d/rcs3 S20hiApp`
         ;;
 	esac
 
-	exit 0` 
+	exit 0
 **Now i have rcs2 ,rcs3 ,rc in init.d**
+
+
 ![Screenshot from 2024-08-06 13-35-07](https://github.com/user-attachments/assets/c5ba3ac5-940d-45be-be12-f4b00f258f11)
+
 
 Make sure the `rc` script is executable:
 
@@ -174,10 +184,13 @@ Make sure the `rc` script is executable:
 
 Modify the `inittab` file to use the custom `rc` script for managing run levels 2 and 3. Remove the default entries for these run levels and add the following line:
 
-`2:2:wait:/etc/init.d/rc 2` 
+	`2:2:wait:/etc/init.d/rc 2` 
+	
+	` 3:3:wait:/etc/init.d/rc 3` 
 
-` 3:3:wait:/etc/init.d/rc 3` 
+
 ![Screenshot from 2024-08-05 15-30-00](https://github.com/user-attachments/assets/08ad06f1-ddd4-41e0-944f-67fe7bd30214)
+
 **Note** remove the runlevels you created from rcS (rcS:145:wait:/etc/init.d/rcS)
 ## Usage
 
@@ -189,7 +202,9 @@ To manage the daemons, use the `rc` script with the desired run level:
     
 -   To start and stop daemons in run level 3:
 
-    `/etc/init.d/rc 3` 
+    `/etc/init.d/rc 3`
+
+    
     
 ![Uploading Screenshot from 2024-08-06 14-28-43.png…]()
 
