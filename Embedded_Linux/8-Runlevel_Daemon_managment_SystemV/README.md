@@ -206,7 +206,8 @@ To manage the daemons, use the `rc` script with the desired run level:
 
     
     
-![Uploading Screenshot from 2024-08-06 14-28-43.png…]()
+![Screenshot from 2024-08-06 14-28-43](https://github.com/user-attachments/assets/b568f13f-4a80-4882-ac8e-8033fe861d3d)
+
 
 ## Notes
 
