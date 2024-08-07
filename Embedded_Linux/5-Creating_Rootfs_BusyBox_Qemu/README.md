@@ -179,7 +179,7 @@ This guide outlines the steps to create a BusyBox-based root filesystem  in QEMU
 ![Screenshot from 2024-07-28 12-05-18](https://github.com/user-attachments/assets/dd1bdd78-9535-47fc-b92d-8033421a5d6f)
 
 
-
+**yeaaay it's working  💃**
 ---
 
 
