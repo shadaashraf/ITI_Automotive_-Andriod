@@ -1,5 +1,5 @@
 
-# BusyBox with NFS
+#Booting on BusyBox Rootfs using NFS
 
 This project demonstrates how to configure an NFS server on your host machine to provide the root filesystem for a BusyBox-based embedded Linux system.
 
