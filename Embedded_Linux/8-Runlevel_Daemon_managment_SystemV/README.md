@@ -40,14 +40,17 @@ done`
 **/bin/helloApp**
 
 
-`#!/bin/ash
-
-while true; do
-    echo "hello from run level 2"
-    sleep 10
-done` 
+	`#!/bin/ash
+	
+	while true; do
+	    echo "hello from run level 2"
+	    sleep 10
+	done` 
 
 ![Screenshot from 2024-08-06 13-34-15](https://github.com/user-attachments/assets/d0580ca9-a1fa-45e6-b06b-9dd17369ae72)
+
+
+
 Make sure both scripts are executable:
 
 
@@ -61,45 +64,45 @@ chmod +x /bin/helloApp`
 Create the initialization scripts in `/etc/init.d`:
 
 **/etc/init.d/rcs2**
-
-`case "$1" in
-  start)
-    printf "Starting Your Daemon: "
-    start-stop-daemon -S -n helloApp -a /bin/helloApp &
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
-    ;;
-  stop)
-    printf "Stopping Your Daemon: "
-    start-stop-daemon -K -n helloApp
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
-    ;;
-  *)
-    echo "Usage: $0 {start|stop}"
-    exit 1
-    ;;
-esac
-exit $?` 
+	
+	`case "$1" in
+	  start)
+	    printf "Starting Your Daemon: "
+	    start-stop-daemon -S -n helloApp -a /bin/helloApp &
+	    [ $? = 0 ] && echo "OK" || echo "FAIL"
+	    ;;
+	  stop)
+	    printf "Stopping Your Daemon: "
+	    start-stop-daemon -K -n helloApp
+	    [ $? = 0 ] && echo "OK" || echo "FAIL"
+	    ;;
+	  *)
+	    echo "Usage: $0 {start|stop}"
+	    exit 1
+	    ;;
+	esac
+	exit $?` 
 
 **/etc/init.d/rcs3**
 
-
-`case "$1" in
-  start)
-    printf "Starting Your Daemon: "
-    start-stop-daemon -S -n hiApp -a /bin/hiApp &
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
-    ;;
-  stop)
-    printf "Stopping Your Daemon: "
-    start-stop-daemon -K -n hiApp
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
-    ;;
-  *)
-    echo "Usage: $0 {start|stop}"
-    exit 1
-    ;;
-esac
-exit $?` 
+	
+	case "$1" in
+	  start)
+	    printf "Starting Your Daemon: "
+	    start-stop-daemon -S -n hiApp -a /bin/hiApp &
+	    [ $? = 0 ] && echo "OK" || echo "FAIL"
+	    ;;
+	  stop)
+	    printf "Stopping Your Daemon: "
+	    start-stop-daemon -K -n hiApp
+	    [ $? = 0 ] && echo "OK" || echo "FAIL"
+	    ;;
+	  *)
+	    echo "Usage: $0 {start|stop}"
+	    exit 1
+	    ;;
+	esac
+	exit $?
 
 Make sure these scripts are executable:
 
