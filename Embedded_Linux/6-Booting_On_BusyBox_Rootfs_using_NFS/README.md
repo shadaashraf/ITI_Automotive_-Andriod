@@ -24,7 +24,7 @@ Ensure that the NFS server is running properly:
 `systemctl status nfs-kernel-server` 
 
 
-![NFS Server Status](/mnt/data/Screenshot from 2024-08-07 20-45-25.png)
+![Screenshot from 2024-08-07 20-45-25](https://github.com/user-attachments/assets/f5474529-a522-41b8-b991-412862cd5eb9)
 
 
 ### 3. Prepare the Root Filesystem
@@ -42,9 +42,10 @@ Copy the root filesystem to the NFS share:
 Check the IP address of your host machine: 
 `ifconfig` 
 
-![ifconfig Output](/mnt/data/Screenshot from 2024-07-28 13-11-42.png)
 
-In this example, the host machine's IP address is `192.168.1.6`.
+
+So, the host machine's IP address is `192.168.1.6`.
+![Screenshot from 2024-07-28 13-11-42](https://github.com/user-attachments/assets/22bf38c4-0ea6-4cf3-ab5a-b77e5f088ceb)
 
 ### 5. Edit the Exports File
 
@@ -58,8 +59,9 @@ Add the following line:
 
 	/srv/nfs-share 192.168.1.50(rw,no_root_squash,no_subtree_check)
 
-![Edit Exports File](/mnt/data/Screenshot from 2024-07-28 13-16-09.png)
+![Screenshot from 2024-07-28 13-16-09](https://github.com/user-attachments/assets/527e8364-77e8-4efc-a29e-4b9d0c006de9)
 
+**explination**
 -   `/srv/nfs-share`: The directory on the NFS server that you are sharing.
 -   `192.168.1.50`: The client allowed to access the NFS share.
 -   `(rw,no_root_squash,no_subtree_check)`: Options that control permissions and behavior.
@@ -73,7 +75,7 @@ Restart the NFS server to apply the changes:
 
 ### 7. Configure Network Tap Interface
 
-Instead of `tapScript`, use `LinkScript.sh`:
+**LinkScript.sh**:
                     
 	#!/bin/bash
 
@@ -97,12 +99,13 @@ Start QEMU with the following command:
 #### Set Client IP Address
 
 `setenv ipaddr 192.168.1.50` 
+**Check if this ip isn't used by Ping it**
+
+![Screenshot from 2024-07-28 13-15-44](https://github.com/user-attachments/assets/e1e28ae6-4cf0-4ab3-9f12-9f5ffba10440)
+
 
 #### Edit the bootcmd Environment Variable
 
-bash
-
-Copy code
 
 `editenv bootcmd` 
 
@@ -113,15 +116,17 @@ Add:
 
 #### Check the kernel address:
 
-`md $zImage_RAM_addr` 
+`md $Zimag_RAM_Add` 
 
-![Kernel Address Check](/mnt/data/Screenshot from 2024-07-28 13-48-18.png)
+
+![Screenshot from 2024-07-28 13-48-18](https://github.com/user-attachments/assets/98c5bdd8-08ca-430a-b9d1-6f0420ff7775)
 
 #### Check the device tree blob address:
 
-`md $fdt_addr_r` 
+`md $dtb_hardware_Add` 
 
-![Device Tree Blob Address Check](/mnt/data/Screenshot from 2024-07-28 13-49-19.png)
+
+![Screenshot from 2024-07-28 13-49-19](https://github.com/user-attachments/assets/a50452d0-0ea4-45b0-8782-7386caa1e990)
 
 #### Edit the bootargs Environment Variable
 
@@ -143,5 +148,5 @@ Add:
 
 #### Final Boot Output:
 
-![Final Boot Output](/mnt/data/Screenshot from 2024-07-28 13-55-44.png)
 
+![Uploading Screenshot from 2024-07-28 13-55-06.png…]()
