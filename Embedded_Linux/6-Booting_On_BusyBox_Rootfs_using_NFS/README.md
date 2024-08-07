@@ -151,4 +151,5 @@ Add:
 #### Final Boot Output:
 
 
-![Uploading Screenshot from 2024-07-28 13-55-06.png…]()
+
+![Screenshot from 2024-07-28 13-55-06](https://github.com/user-attachments/assets/ae6f49e9-bc18-4d86-832a-6fffeda78ca0)
