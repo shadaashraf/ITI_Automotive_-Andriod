@@ -1,7 +1,3 @@
-Here's the revised README with a new section for setting up the environment before creating the `meta-iti` layer. This should provide a more logical flow for setting up and building your Yocto recipe:
-
----
-
 # Yocto Recipe for Printing a Message
 
 ## Overview
@@ -41,6 +37,7 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
    ```sh
    mkdir -p meta-iti
    ```
+![Screenshot from 2024-08-10 22-40-17](https://github.com/user-attachments/assets/a17da15d-10c8-49c0-9cf3-b9c8c72f4351)
 
 2. **Navigate to the Layer Directory**:
 
@@ -54,6 +51,7 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
    mkdir -p my-recipes/recipe
    cd my-recipes/recipe
    ```
+![Screenshot from 2024-08-10 22-47-27](https://github.com/user-attachments/assets/0fa2a6b0-c7b2-43ec-8719-86a518fc5f1b)
 
 ### 3. Create the Recipe File
 
@@ -95,6 +93,10 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
    LAYERSERIES_COMPAT_meta-iti = "kirkstone"
    ```
 
+   
+![Screenshot from 2024-08-11 01-05-51](https://github.com/user-attachments/assets/ad464d99-a8ee-4583-a62e-a4f505ea5861)
+
+
 ### 4. Modify `bblayers.conf`
 
 1. **Navigate to the `conf` Directory**:
@@ -107,9 +109,8 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
 
    Open `conf/bblayers.conf` in your favorite text editor and add your new layer to the `BBLAYERS` variable:
 
-   ```sh
-   BBLAYERS += "${HOME}/yocto/meta-iti"
-   ```
+![Screenshot from 2024-08-10 23-05-14](https://github.com/user-attachments/assets/3c02a899-f225-4e97-9f17-0eea5060ec8e)
+
 
    Save and close the file.
 
@@ -126,6 +127,10 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
    ```sh
    bitbake app1
    ```
+
+ 
+   ![Screenshot from 2024-08-11 00-08-14](https://github.com/user-attachments/assets/bc548fb6-b321-4088-8ad0-e40e72c43233)
+
 
 ### 6. Locate and View the Logs
 
@@ -148,9 +153,8 @@ This guide walks you through creating a Yocto recipe that prints a simple messag
 
 In `log.do_configure`, you should see:
 
-```
-Hello, this is a simple message from your Yocto recipe!
-```
+![Screenshot from 2024-08-11 00-25-06](https://github.com/user-attachments/assets/639b91a3-57f0-47a8-9bfd-c7de0d201f59)
+
 
 ## Troubleshooting
 
